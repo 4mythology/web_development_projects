@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Converter</title>
+        <link rel="icon" type="image/x-icon" href="./logo.png">
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <nav>
+        <img src="./logo.png" alt="" style="height:40px;" class="nav">
+        <h1 class="nav" style="font-size: 30px; color: white; padding-left: 0px;">Converter</h1>
+        <ul style="list-style-type: none; padding-top: 5px;">
+            <li class="nav"><a href="./Pound.html" style="list-style-type: none; text-decoration: none;">Pound ⇆ Kilograms</a></li>
+            <li class="nav"><a href="./Inches.html" style="list-style-type: none; text-decoration: none;">Inches ⇆ Centimetres</a></li>
+            <li class="nav"><a href="./Celcius.html" style="list-style-type: none; text-decoration: none;">Celcius ⇆ Fahrenheit</a></li>
+            <li class="nav"><a href="./BMI.html" style="list-style-type: none; text-decoration: none;">BMI Calculations</a></li>
+        </ul>
+    </nav>
+    <body>
+        <table class="table1" style="padding-top: 100px;">
+            <tr>
+                <td colspan="5">
+                    <h1>Inches to Centimetres</h1>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 200px; text-align: right;">
+                    <input type="number" id="input">
+                </td>
+                <td style="width: 200px; text-align: left; padding-left: 20px;" >
+                    <p id="text1">In</p>
+                </td>
+                <td style="width: 200px; text-align: center;">
+                    <button type="button" onclick="exchange()"><p style="font-size: 50px;">⇒</p></button>
+                </td>
+                <td style="width: 200px; text-align: right; padding-right: 20px;">
+                    <p id="answer">. . .</p>
+                </td>
+                <td style="width: 200px; text-align: left; padding-left: 20px;">
+                    <p id="text2">Cm</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5" style="text-align: center;">
+                    <button type="button" onclick="conversion()">Convert</button>
+                </td>
+            </tr>
+        </table>
+        <script>
+            var type = true;
+            function exchange(){
+                if (type) {
+                    document.getElementById("text1").innerHTML = "cm";
+                    document.getElementById("text2").innerHTML = "In";
+                    document.getElementById("answer").innerHTML= ". . .";
+                    type = false;
+                }else{
+                    document.getElementById("text1").innerHTML = "In";
+                    document.getElementById("text2").innerHTML = "cm";
+                    document.getElementById("answer").innerHTML= ". . .";
+                    type = true;
+                }
+            }
+            function conversion(){
+                if (type) {
+                    var num = document.getElementById("input").value;
+                    var ans = num * 2.54;
+                    document.getElementById("answer").innerHTML = ans;
+                } else{
+                    var num = document.getElementById("input").value;
+                    var ans = num / 2.54;
+                    document.getElementById("answer").innerHTML = ans;
+                }
+            }
+        </script>
+    </body>
+</html>
