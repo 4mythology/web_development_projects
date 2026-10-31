@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Converter</title>
+        <link rel="icon" type="image/x-icon" href="C:\Users\Amy Irina Ruth\Documents\BrainSTREAM\HTML and CSS\Conversion\logo.png">
+        <link rel="stylesheet" href="C:\Users\Amy Irina Ruth\Documents\BrainSTREAM\HTML and CSS\Conversion\styles.css">
+    </head>
+    <nav>
+        <img src="C:\Users\Amy Irina Ruth\Documents\BrainSTREAM\HTML and CSS\Conversion\logo.png" alt="" style="height:40px;" class="nav">
+        <h1 class="nav" style="font-size: 30px; color: white; padding-left: 0px;">Converter</h1>
+        <ul style="list-style-type: none; padding-top: 5px;">
+            <li class="nav"><a href="C:\Users\Amy Irina Ruth\Documents\BrainSTREAM\HTML and CSS\Conversion\Pound.html" style="list-style-type: none; text-decoration: none;">Pound ⇆ Kilograms</a></li>
+            <li class="nav"><a href="C:\Users\Amy Irina Ruth\Documents\BrainSTREAM\HTML and CSS\Conversion\Inches.html" style="list-style-type: none; text-decoration: none;">Inches ⇆ Centimetres</a></li>
+            <li class="nav"><a href="C:\Users\Amy Irina Ruth\Documents\BrainSTREAM\HTML and CSS\Conversion\Celcius.html" style="list-style-type: none; text-decoration: none;">Celcius ⇆ Fahrenheit</a></li>
+            <li class="nav"><a href="C:\Users\Amy Irina Ruth\Documents\BrainSTREAM\HTML and CSS\Conversion\BMI.html" style="list-style-type: none; text-decoration: none;">BMI Calculations</a></li>
+        </ul>
+    </nav>
+    <body>
+        <table class="table1" style="padding-top: 100px;">
+            <tr>
+                <td style="text-align: center;" colspan="2">
+                    <h1>Body Mass Index Calculations</h1>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right; padding-right: 20px; width: 500px;">
+                    <p>Weight(kg):</p>
+                </td>
+                <td style="text-align: left; padding-left: 20px; width: 500px;">
+                    <input type="number" id="weight">
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right; padding-right: 20px; width: 500px;">
+                    <p>Height(m):</p>
+                </td>
+                <td style="text-align: left; padding-left: 20px; width: 500px;">
+                    <input type="number" id="height">
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right; padding-right: 20px; width: 500px;">
+                    <p>Result:</p>
+                </td>
+                <td style="text-align: left; padding-left: 20px; width: 500px;">
+                    <p id="answer">. . .</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;" colspan="2">
+                    <button type="button" onclick="calculate()">Calculate</button>
+                </td>
+            </tr>
+        </table>
+        <script>
+            function calculate() {
+                var wgt = document.getElementById("weight").value;
+                var hgt = document.getElementById("height").value;
+                var ans = wgt / (hgt * hgt);
+                if (ans < 15) {
+                    document.getElementById("answer").innerHTML = "Very severely underweight";
+                } else if(ans < 16) {
+                    document.getElementById("answer").innerHTML = "Severely underweight";
+                } else if(ans < 18.5) {
+                    document.getElementById("answer").innerHTML = "Underweight";
+                } else if(ans < 25) {
+                    document.getElementById("answer").innerHTML = "Normal";
+                } else if(ans < 30) {
+                    document.getElementById("answer").innerHTML = "Overweight";
+                } else if(ans < 35) {
+                    document.getElementById("answer").innerHTML = "Moderately obese";
+                } else if(ans < 40) {
+                    document.getElementById("answer").innerHTML = "Severely obese";
+                } else {
+                    document.getElementById("answer").innerHTML = "Very severely obese";
+                }
+            }
+        </script>
+    </body>
+</html>

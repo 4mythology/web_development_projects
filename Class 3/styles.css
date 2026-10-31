@@ -1,0 +1,59 @@
+body{
+    background: radial-gradient(red, orange, yellow)
+}
+.title{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 30px;
+    left: 30px;
+}
+.Class1{
+    background-color: black;
+    color: white;
+    position: absolute;
+    left: 0%;
+    top: 10px;
+    width: 110px;
+}
+.Class2{
+    background-color: black;
+    color: white;
+    position: absolute;
+    left: 18.2%;
+    top: 10px;
+    width: 110px;
+}
+.Class3{
+    background-color: black;
+    color: white;
+    position: absolute;
+    left: 36.4%;
+    top: 10px;
+    width: 110px;
+}
+.Class4{
+    background-color: black;
+    color: white;
+    position: absolute;
+    left: 54.6%;
+    top: 10px;
+    width: 110px;
+}
+.Class5{
+    background-color: black;
+    color: white;
+    position: absolute;
+    left: 72.8%;
+    top: 10px;
+    width: 110px;
+}
+.Class6{
+    background-color: black;
+    color: white;
+    position: absolute;
+    left: 91%;
+    top: 10px;
+    width: 110px;
+}

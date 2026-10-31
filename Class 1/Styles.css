@@ -1,0 +1,15 @@
+div{
+    font-size: 20px; font-weight: 600;
+}
+.navigation{
+    font-style: italic; float: left;
+}
+.logo{
+    font-size: 50px; font-style: italic; color: gray; float: left;
+}
+ul.no-bullet{
+    font-style: none;
+}
+.main{
+    background-color:lightgray; height: 60px;
+}

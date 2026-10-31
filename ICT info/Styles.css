@@ -1,0 +1,35 @@
+table{
+    float:inherit;
+    margin-left: 100px;
+}
+td{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.img{
+    width: 460px;
+}
+video{
+    width: 460px;
+}
+body{
+    background: radial-gradient(darkblue, black)
+}
+h1{
+    color: white;
+    font-size: 50px;
+    padding: 0;
+}
+h2{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+p{
+    color: white;
+    text-align: justify;
+    font-size: 20px;
+}
+ul{
+    color: white;
+}

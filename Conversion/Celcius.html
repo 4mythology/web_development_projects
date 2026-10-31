@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Converter</title>
+        <link rel="icon" type="image/x-icon" href="C:\Users\Amy Irina Ruth\Documents\BrainSTREAM\HTML and CSS\Conversion\logo.png">
+        <link rel="stylesheet" href="C:\Users\Amy Irina Ruth\Documents\BrainSTREAM\HTML and CSS\Conversion\styles.css">
+    </head>
+    <nav>
+        <img src="C:\Users\Amy Irina Ruth\Documents\BrainSTREAM\HTML and CSS\Conversion\logo.png" alt="" style="height:40px;" class="nav">
+        <h1 class="nav" style="font-size: 30px; color: white; padding-left: 0px;">Converter</h1>
+        <ul style="list-style-type: none; padding-top: 5px;">
+            <li class="nav"><a href="C:\Users\Amy Irina Ruth\Documents\BrainSTREAM\HTML and CSS\Conversion\Pound.html" style="list-style-type: none; text-decoration: none;">Pound ⇆ Kilograms</a></li>
+            <li class="nav"><a href="C:\Users\Amy Irina Ruth\Documents\BrainSTREAM\HTML and CSS\Conversion\Inches.html" style="list-style-type: none; text-decoration: none;">Inches ⇆ Centimetres</a></li>
+            <li class="nav"><a href="C:\Users\Amy Irina Ruth\Documents\BrainSTREAM\HTML and CSS\Conversion\Celcius.html" style="list-style-type: none; text-decoration: none;">Celcius ⇆ Fahrenheit</a></li>
+            <li class="nav"><a href="C:\Users\Amy Irina Ruth\Documents\BrainSTREAM\HTML and CSS\Conversion\BMI.html" style="list-style-type: none; text-decoration: none;">BMI Calculations</a></li>
+        </ul>
+    </nav>
+    <body>
+        <table class="table1" style="padding-top: 100px;">
+            <tr>
+                <td colspan="5">
+                    <h1>Celcius to Fahrenheit</h1>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 200px; text-align: right;">
+                    <input type="number" id="input">
+                </td>
+                <td style="width: 200px; text-align: left; padding-left: 20px;" >
+                    <p id="text1">°C</p>
+                </td>
+                <td style="width: 200px; text-align: center;">
+                    <button type="button" onclick="exchange()"><p style="font-size: 50px;">⇒</p></button>
+                </td>
+                <td style="width: 200px; text-align: right; padding-right: 20px;">
+                    <p id="answer">. . .</p>
+                </td>
+                <td style="width: 200px; text-align: left; padding-left: 20px;">
+                    <p id="text2">°F</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5" style="text-align: center;">
+                    <button type="button" onclick="conversion()">Convert</button>
+                </td>
+            </tr>
+        </table>
+        <script>
+            var type = true;
+            function exchange(){
+                if (type) {
+                    document.getElementById("text1").innerHTML = "°F";
+                    document.getElementById("text2").innerHTML = "°C";
+                    document.getElementById("answer").innerHTML= ". . .";
+                    type = false;
+                }else{
+                    document.getElementById("text1").innerHTML = "°C";
+                    document.getElementById("text2").innerHTML = "°F";
+                    document.getElementById("answer").innerHTML= ". . .";
+                    type = true;
+                }
+            }
+            function conversion(){
+                if (type) {
+                    var num = document.getElementById("input").value;
+                    var ans = num * 1.8 + 32;
+                    document.getElementById("answer").innerHTML = ans;
+                } else{
+                    var num = document.getElementById("input").value;
+                    var ans = num / 1.8 - 32;
+                    document.getElementById("answer").innerHTML = ans;
+                }
+            }
+        </script>
+    </body>
+</html>
